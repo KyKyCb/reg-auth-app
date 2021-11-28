@@ -1,0 +1,50 @@
+.form__container{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.form__content{
+    width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
+
+.form{
+    width: 100%;
+}
+
+.form .button{
+    margin-top: 10px;
+}
+
+.form__form-name{
+    margin: 0;
+}
+
+.form__answer-text{
+    margin-top: 10px;
+}
+
+@media (max-width: 450px) {
+    .form__content{
+        width: 90%;
+    }
+}
+@media (max-height: 800px) {
+    .form__content{
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}

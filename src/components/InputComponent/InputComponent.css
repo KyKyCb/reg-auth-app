@@ -1,0 +1,45 @@
+.input__label{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    width: 100%;
+
+    margin: 10px 0 5px 0;
+}
+
+.input__label-text{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+
+    margin-bottom: 5px;
+}
+
+.input__label input,
+.input__label select{
+    height: 40px;
+
+    padding-left: 10px;
+    border: 1px solid #333333;
+    border-radius: 8px;
+
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+
+}
+
+.input__label select *{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.input__label input:focus,
+.input__label select:focus{
+    transition: all ease-in-out 0.1s;
+    outline: none;
+    border-color: #4285F4;
+    box-shadow: 0px 0px 5px  #4285F4;
+}
