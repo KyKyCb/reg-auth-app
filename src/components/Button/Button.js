@@ -1,3 +1,4 @@
+import React from 'react'
 import './Button.css'
 
 const Button = ({buttonName, onClickHandler})=>{
@@ -14,4 +15,4 @@ const Button = ({buttonName, onClickHandler})=>{
     )
 }
 
-export default Button
+export default React.memo(Button)

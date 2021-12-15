@@ -1,5 +1,5 @@
 
-import { useState } from "react"
+import React, { useCallback, useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { toast } from "react-toastify"
 import Button from "../Button/Button"
@@ -19,33 +19,40 @@ function FormComponent ({isName, isLastName, isEmail, isPhone, isPassword, isDes
     const [country, setCountry] = useState({unicode: 'UA', countryName: 'Ukraine'})
     const [password, setPassword] = useState('')
 
-    const setNameHandler = (newName)=>{
+    useEffect(()=>{
+        console.log('from component');
+    })
+
+    const setNameHandler = useCallback((newName)=>{
         setName(newName.trim())
-    }
+    }, [])
 
-    const setLastNameHandler = (newLastName)=>{
+    const setLastNameHandler = useCallback((newLastName)=>{
         setLastName(newLastName.trim())
-    }
+    },[])
 
-    const setDescriptionHandler = (newDesc)=>{
+    const setDescriptionHandler = useCallback((newDesc)=>{
         setDescription(newDesc)
-    }
+    },[])
 
-    const setEmailHandler = (newEmail)=>{
+    const setEmailHandler = useCallback((newEmail)=>{
         setEmail(newEmail.trim())
-    }
+    },[])
 
-    const setPhoneHandler = (newPhone)=>{
+    const setPhoneHandler = useCallback((newPhone)=>{
+        if(!newPhone){
+            return
+        }
         setPhone(newPhone.trim())
-    }
+    },[])
     
-    const setCountryHandler = (newCountry)=>{
+    const setCountryHandler = useCallback((newCountry)=>{
         setCountry(newCountry)
-    }
+    },[])
 
-    const setPasswordHandler = (newPassword)=>{
+    const setPasswordHandler = useCallback((newPassword)=>{
         setPassword(newPassword.trim())
-    }
+    },[])
 
     const validateForm = (objectValidate)=>{
         const args = Object.keys(arguments[0])

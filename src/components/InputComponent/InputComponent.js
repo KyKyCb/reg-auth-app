@@ -1,3 +1,4 @@
+import React from 'react'
 import './InputComponent.css'
 const InputComponent = ({type, name, value, labelName, onChangeHandler})=>{
     const onChange = (event)=>{
@@ -16,4 +17,4 @@ const InputComponent = ({type, name, value, labelName, onChangeHandler})=>{
     )
 }
 
-export default InputComponent
+export default React.memo(InputComponent)

@@ -1,3 +1,4 @@
+import React from 'react'
 import PhoneInput from 'react-phone-number-input'
 import countryNames from 'react-phone-number-input/locale/en.json'
 
@@ -32,4 +33,4 @@ const PhoneInputComponent = ({value, country, onChangePhoneHandler, onChangeCoun
     )
 }
 
-export default PhoneInputComponent
+export default React.memo(PhoneInputComponent)
